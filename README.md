@@ -58,7 +58,7 @@ You can easily customize the dashboard by:
 
 ## License
 
-[Your License Information]
+MIT license
 
 ## Credits
 

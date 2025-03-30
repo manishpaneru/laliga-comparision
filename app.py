@@ -386,8 +386,7 @@ with tab1:
         return standings_df
     
     # Season selection for this tab
-    latest_seasons = seasons[-5:] if len(seasons) >= 5 else seasons
-    selected_season = st.selectbox("Select Season", options=latest_seasons, index=len(latest_seasons)-1, key="tab1_season")
+    selected_season = st.selectbox("Select Season", options=seasons, index=len(seasons)-1, key="tab1_season")
     
     # Calculate standings for selected season
     standings_df = calculate_season_standings(data, selected_season)
@@ -735,7 +734,7 @@ with tab2:
         selected_team_seasons = st.multiselect(
             "Select Seasons to Compare", 
             options=team_seasons,
-            default=team_seasons[-5:] if len(team_seasons) >= 5 else team_seasons,
+            default=team_seasons,
             key="team_analysis_seasons"
         )
     
